@@ -1,0 +1,11 @@
+.navbar {
+    font-size: 1.25rem;  
+}
+
+.nav-link {
+    margin-right: 1rem; 
+}
+
+.navbar {
+    justify-content: space-between;
+}
