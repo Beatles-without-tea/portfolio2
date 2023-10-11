@@ -1,0 +1,24 @@
+.aboutpage {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+}
+
+.tech-rectangle {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;  /* Dark background */
+    border: 2px solid #555;  /* Slight border for style */
+    border-radius: 10px;     /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Drop shadow for depth */
+    gap: 10px;               /* Spacing between icons */
+}
+
+.tech-rectangle i {
+    color: #61dafb;   /* Color of the icons, change as desired */
+}

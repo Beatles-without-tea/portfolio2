@@ -10,9 +10,11 @@ function CustomNavigationBar() {
       <>
         <Navbar bg="dark" data-bs-theme="dark" className="d-flex justify-content-between">
           <Container className="custom-nav-left">
-            <Navbar.Brand href="/home">Max Beales</Navbar.Brand>
+            {/* <Navbar.Brand href="/home">Max Beales</Navbar.Brand> */}
             <Nav className="me-auto">
              {/* <Nav.Link href="/home"></Nav.Link> */}
+             <Nav.Link href="/home">Home</Nav.Link>
+
               <Nav.Link href="/about">About me</Nav.Link>
               <Nav.Link href="/projects">Projects</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
