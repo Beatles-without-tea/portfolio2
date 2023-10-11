@@ -1,0 +1,41 @@
+.homepage {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+}
+
+@keyframes slideInImage {
+    from {
+        transform: translateX(100%);  
+    }
+    to {
+        transform: translateX(0);    
+    }
+}
+
+.slide-in-image {
+    transform: translateX(100%);      
+    animation: slideInImage 2s forwards;
+}
+
+
+
+@keyframes slideInText {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-text {
+    transform: translateX(-100%);
+    animation: slideInText 2s forwards;
+    font-family: 'Space Mono', monospace;
+
+}
