@@ -10,7 +10,7 @@
 
 @keyframes slideInImage {
     from {
-        transform: translateX(100%);  
+        transform: translateX(100%) scale(1);  
     }
     to {
         transform: translateX(0);    
@@ -18,8 +18,9 @@
 }
 
 .slide-in-image {
-    transform: translateX(100%);      
+    transform: translateX(100%) ;      
     animation: slideInImage 2s forwards;
+
 }
 
 
@@ -38,4 +39,5 @@
     animation: slideInText 2s forwards;
     font-family: 'Space Mono', monospace;
 
-}
+} 
+

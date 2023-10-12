@@ -46,12 +46,12 @@ function Project ({title, subtitle, imgSource, imgSize, tools, projectLink}){
                 <h1 style={{color:'#66FF00'}} >{title}</h1>
                 <h2>{subtitle}</h2>
                 <p>{tools}</p>
-            <button onClick={() => window.open(projectLink, "_blank")}>View Project</button>
-
+                <div className='projectButton'>
+                 {/* <button   onClick={() => window.open(projectLink, "_blank")}>View Project</button> */}
+                </div>
             </div>
             <div >
-            {/* <RotatingImage imgSource={imgSource} imgSize={imgSize}/> */}
-                <img className="projectImage" src={imgSource} style={{width:imgSize}}></img>
+                <img onClick={() => window.open(projectLink, "_blank")} className="projectImage" src={imgSource} style={{width:imgSize}}></img>
             </div>
             
         </div>
@@ -61,30 +61,44 @@ function Project ({title, subtitle, imgSource, imgSize, tools, projectLink}){
 
 function Projects() {
     return (
-        <div className='projectpage' >
+        <div  className='projectpage' >
         <div>
-            <h1>All Projects</h1>
+            <h1 style={{color:'#66FF00'}} className='projectText' >All Projects</h1>
         </div>
 
-        <Project title="German whist" 
-        subtitle ='German Whist card game implemented in Python that utilizes the Monte Carlo Tree Search (MCTS) algorithm to simulate an intelligent opponent.' 
-        imgSource='images/monte_carlo_project.png'
-        tools='Python | OOP | Git'
-        imgSize='120vh'
-        projectLink='https://github.com/Beatles-without-tea/german_whist'/>
 
-
-<Project title="Child Malnutrition Dashboard" 
+    <Project title="Child Malnutrition Dashboard" 
         subtitle ='Interactive dashboard analysing global malnutrition trends in children under 5.
-         The dashboard, containerized with Docker, ensures scalable access 
-          via deployment on cloud Platforms.'
+         Containerized with Docker and features real time requests to the GHO OData API'
         imgSource='images/hunger_dash.png'
         tools='Python | Dash | Pandas | NumPy | HTML | CSS | Docker'
-        imgSize='120vh'
+        imgSize='100vh'
 
+        projectLink='https://github.com/Beatles-without-tea/hunger-dash'/>
+
+        <Project title="German whist" 
+        subtitle ='German Whist card game implemented in Python that utilises the Monte Carlo Tree Search (MCTS) algorithm to simulate an intelligent opponent' 
+        imgSource='images/original_monte_carlo.png'
+        tools='Python | OOP | Git'
+        imgSize='100vh'
         projectLink='https://github.com/Beatles-without-tea/german_whist'/>
 
 
+        <Project title="Multi-Armed Bandits" 
+        subtitle='Python implementation of the Multi-Armed Bandits reinforcement learning algorithm '
+        imgSource='images/reinforcement.png'
+        tools='Python | Jupyter Notebooks | MatPlotLib | OOP | Git'
+        imgSize='100vh'
+        projectLink='https://github.com/Beatles-without-tea/reinforcement-learning-algorithms/blob/master/multi-armed-bandits.ipynb'/>
+
+
+<Project title="ECB Interest Rate Forecasts" 
+        subtitle ='Extention of the 2013 paper Forecasting and policy making'
+        imgSource='images/taylor_rules.png'
+        tools='Python | Pandas | NumPy | Seaborn | Scipy'
+        imgSize='100vh'
+
+        projectLink='https://github.com/Beatles-without-tea/ECB_forecasting'/>
 
 
 
