@@ -1,0 +1,24 @@
+.projectpage {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+}
+
+.project {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+}
+
+.projectText{
+    display: block;
+    /* color:#66FF00; */
+}
