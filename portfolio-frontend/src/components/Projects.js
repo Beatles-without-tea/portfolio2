@@ -52,6 +52,7 @@ function Project ({title, subtitle, imgSource, imgSize, tools, projectLink}){
             </div>
             <div >
                 <img onClick={() => window.open(projectLink, "_blank")} className="projectImage" src={imgSource} style={{width:imgSize}}></img>
+                <div className="overlayText">Click to open repo</div>
             </div>
             
         </div>
