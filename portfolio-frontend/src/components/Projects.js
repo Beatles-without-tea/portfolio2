@@ -1,71 +1,91 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Projects.css';
 
 
-import { useEffect, useRef, useState } from 'react';
-
-function RotatingImage({ imgSource, imgSize }) {
-  const [inView, setInView] = useState(false);
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const imagePosition = imageRef.current.getBoundingClientRect();
-
-      // If the top of the image is visible within the viewport
-      if (imagePosition.top <= window.innerHeight && imagePosition.top >= 0 && !inView) {
-        setInView(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [inView]);
-
-  return (
-    <img 
-        src={imgSource} 
-        alt="Animated Image" 
-        className={`projectImage ${inView ? 'inView' : ''}`} 
-        ref={imageRef}
-        style={{ width: imgSize }}
-    />
-  );
-}
 
 // export default RotatingImage;
 
-function Project ({title, subtitle, imgSource, imgSize, tools, projectLink}){
+function Project ({title, subtitle, imgSource, imgSize, tools, projectLink,  onTopArrowClick, onBottomArrowClick}){
     return (
         <div className='project'>
+
             <div className='projectText'>
+            <div className="arrow top" onClick={onTopArrowClick}>&uarr;</div>
+
                 <h1 style={{color:'#66FF00'}} >{title}</h1>
                 <h2>{subtitle}</h2>
                 <p>{tools}</p>
                 <div className='projectButton'>
-                 {/* <button   onClick={() => window.open(projectLink, "_blank")}>View Project</button> */}
+    
+            <div className="arrow bottom" onClick={onBottomArrowClick}>&darr;</div>
+
                 </div>
             </div>
             <div >
                 <img onClick={() => window.open(projectLink, "_blank")} className="projectImage" src={imgSource} style={{width:imgSize}}></img>
-                <div className="overlayText">Click to open repo</div>
+                <div className="overlayText">Open Repository</div>
             </div>
-            
+
         </div>
 
     )
 }
 
+
 function Projects() {
+    const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+    const projects = [
+        {title:"Child Malnutrition Dashboard", 
+        subtitle :'Interactive dashboard analysing global malnutrition trends in children under 5. Containerized with Docker and features real time requests to the GHO OData API',
+        imgSource:'images/hunger_dash.png',
+        tools:'Python | Dash | Pandas | NumPy | HTML | CSS | Docker',
+        imgSize:'100vh',
+
+        projectLink:'https://github.com/Beatles-without-tea/hunger-dash'},
+
+        {title:"German whist" ,
+        subtitle :'German Whist card game implemented in Python that utilises the Monte Carlo Tree Search (MCTS) algorithm to simulate an intelligent opponent' ,
+        imgSource:'images/original_monte_carlo.png',
+        tools:'Python | OOP | Git',
+        imgSize:'100vh',
+        projectLink:'https://github.com/Beatles-without-tea/german_whist'}
+
+    ];
+
+    function navigateToPrevious() {
+        setCurrentProjectIndex(prevIndex => Math.max(0, prevIndex - 1));
+    }
+    
+    function navigateToNext() {
+        setCurrentProjectIndex(prevIndex => Math.min(projects.length - 1, prevIndex + 1));
+    }
+    
+
     return (
         <div  className='projectpage' >
-        <div>
-            <h1 style={{color:'#66FF00'}} className='projectText' >All Projects</h1>
+            <div>
+                <h1 style={{color:'#66FF00'}} className='projectText' >All Projects</h1>
+            </div>
+            <div>
+                {/* <div className="arrow top" onClick={navigateToPrevious}>&uarr;</div> */}
+                <Project {...projects[currentProjectIndex]} 
+
+                onTopArrowClick={navigateToPrevious}
+                onBottomArrowClick={navigateToNext} />
+
+                {/* <div className="arrow bottom" onClick={navigateToNext}>&darr;</div> */}
+            </div>
         </div>
+        );
+}
+
+function Projects2() {
+    return (
+        <div  className='projectpage' >
+            <div>
+                <h1 style={{color:'#66FF00'}} className='projectText' >All Projects</h1>
+            </div>
 
 
     <Project title="Child Malnutrition Dashboard" 
