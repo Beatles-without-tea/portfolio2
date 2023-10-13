@@ -1,17 +1,24 @@
-.projectpage {
+.projectPage {
     background-color: black;
     color: white;
-    /* height: 200vh; */
-    display: block;
+    height: 110vh;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     margin:0px;
+    /* position:relative; */
+    /* margin-bottom:100%; */
+    margin-top: auto;
+    min-height: 100vh;
+    overflow: hidden;
 }
+
+
 
 .project {
     background-color: black;
     color: white;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +28,9 @@
 .projectText{
     display: block;
     font-family: 'Space Mono', monospace;
+
 }
+
 
 .projectImage{
     box-shadow: 5px 5px 15px rgba(255, 255, 255, 1);
@@ -66,25 +75,35 @@
 
  .arrow {
     position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.7;
+    width: 10%;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    transition: transform 0.1s ease; 
+
 }
+
 
 .arrow.top {
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 45%;
+    transform: translateX(-50%) rotate(270deg);
+}
+
+.arrow.top.active {
+    top: 50%;
+    left: 45%;
+    transform: translateX(-50%) rotate(270deg) scale(0.9);
 }
 
 .arrow.bottom {
     bottom: 20%;
     left: 0%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.arrow.bottom.active {
+    bottom: 20%;
+    left: 0%;
+    transform: translateX(-50%) rotate(90deg) scale(0.9);
 }
