@@ -99,11 +99,27 @@ function Projects() {
     ];
 
     function navigateToPrevious() {
-        setCurrentProjectIndex(prevIndex => Math.max(0, prevIndex - 1));
+        setCurrentProjectIndex(prevIndex => {
+            if (prevIndex === 0){
+                return projects.length - 1;
+            } else{
+                return prevIndex -1;
+            }
+        }
+            
+            
+            
+            );
     }
     
     function navigateToNext() {
-        setCurrentProjectIndex(prevIndex => Math.min(projects.length - 1, prevIndex + 1));
+        setCurrentProjectIndex(prevIndex =>{
+            if (prevIndex === projects.length -1){
+                return 0
+            }else{
+                return prevIndex + 1;
+            }
+        });
     }
     
 
