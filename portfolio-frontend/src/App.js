@@ -13,6 +13,7 @@ import './index.css';
 
 
 
+{/* */}
 
 
 
@@ -20,7 +21,8 @@ function App() {
   return (
       <Router>
           <div className="App">
-              <CustomNavigationBar />
+    <CustomNavigationBar /> 
+
               <Routes>
                 <Route path="/home" element={<Home />} />
                   <Route path="/about" element={<AboutMe />} />
@@ -32,6 +34,18 @@ function App() {
   );
 }
 
+// function App() {
+// return (
+//   <div>
+//     <CustomNavigationBar /> 
+
+//       <Home />
+//       <AboutMe />
+//       <Projects />
+//       <Contact />
+//   </div>
+// );
+// }
 
 
 // export default ColorSchemesExample;

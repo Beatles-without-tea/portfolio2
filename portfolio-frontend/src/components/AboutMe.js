@@ -11,6 +11,9 @@ const ColoredLine = ({ color }) => (
     />
 );
 
+
+
+
 function AboutMe() {
     // const textRef = useRef(null);
     // const imageRef = useRef(null);
@@ -27,42 +30,50 @@ function AboutMe() {
 
     return (
         <div className='aboutpage'>
-            {/* <h1>Max Beales <br/> 
-                MSc <span style={{color:'#66FF00'}}>Computer Science </span>  
-                graduate <br/> 
-                <span style={{color:'#66FF00'}}>Data</span> Enthusiast */}
-            {/* </h1>
+ 
+            <p>I am this that this that</p>
 
-            <img src="/images/home_image.png" alt="Descriptive Alt Text" /> */}
-            <p>affff</p>
 
-            <h2>Skills</h2>
+            <ColoredLine color="#66FF00" />
+            <h2 style={{marginLeft:'45%'}} >Qualifications</h2>
             <div class="tech-rectangle">
-            <i class="fab fa-python fa-2x"></i>
-            <i class="fab fa-js-square fa-2x"></i>
-            <i class="fab fa-html5 fa-2x"></i>
-            <i class="fab fa-css3 fa-2x"></i>
-
-            <i class="fab fa-react fa-2x"></i>
-
-
-            <i class="fab fa-git fa-2x"></i>
-            <i class="fab fa-linux fa-2x"></i>
-            <i class="fab fa-docker fa-2x"></i>
-
-
-
-
-
+            <h5>MSc Computer Science; Artifical Intelligence, Systems, Data - PSL Research University (Paris-Dauphine)</h5>
+            <h5>MSc Economics; Econometrics - Aix Marseille University & University of Konstanz</h5>
+            <h5>BSc Economics; Finance - Aix Marseille University</h5>
             </div>
 
             <ColoredLine color="#66FF00" />
-            <h2>Qualifications</h2>
+            
+
+            <h2  class="title-block">Experience</h2>
+            <div class="tech-rectangle">
+            <h5>Data Scientist (Co-op/Alternance) - Ceva Animal Health - </h5>
+            <h5>Data Scientist Internship - Ceva Animal Health - </h5>
+            </div>
+            
             <ColoredLine color="#66FF00" />
-       
-            <h2>Experience</h2>
-          
-            <ColoredLine color="#66FF00" />
+
+            <h2 class="title-block">Skills</h2>
+            <div class="tech-rectangle">
+                <div style={{display:'flex', alignItems:'center'}}>
+                    <h5>Languages:</h5>
+                    <h6>Python, Javascript, HTML, CSS</h6>
+                </div>
+                <div style={{display:'flex', alignItems:'center'}}>
+                <h5>Libraries: </h5>
+                <h6>Python, Javascript, HTML, CSS</h6>
+
+                </div>
+                <div style={{display:'flex', alignItems:'center'}}>
+                <h5>Frameworks:</h5>
+                <h6>Python, Javascript, HTML, CSS</h6>
+
+                </div>
+                <div style={{display:'flex', alignItems:'center'}}>
+                <h5>Tools:</h5>
+                <h6>Python, Javascript, HTML, CSS</h6>
+                </div>
+            </div>
 
         </div>
     );

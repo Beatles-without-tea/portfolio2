@@ -9,7 +9,7 @@
 }
 
 .tech-rectangle {
-    display: flex;
+    display: block;
     align-items: center;
     padding: 10px 20px;
     background-color: #333;  /* Dark background */
@@ -17,8 +17,19 @@
     border-radius: 10px;     /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Drop shadow for depth */
     gap: 10px;               /* Spacing between icons */
+    width: 50%;
+    margin-left: 25%;
+    font-family: 'Space Mono', monospace;
+    
+}
+
+.title-block{
+    margin-left:45%;
+    font-family: 'Space Mono', monospace;
+
+
 }
 
 .tech-rectangle i {
-    color: #61dafb;   /* Color of the icons, change as desired */
+    color: #61dafb; 
 }
