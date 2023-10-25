@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import './NavbarStyles.css';
 // import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -15,24 +15,22 @@ import './index.css';
 
 {/* */}
 
-
-
 function App() {
   return (
-      <Router>
-          <div className="App">
-    <CustomNavigationBar /> 
+    <Router>
+      <div className="App">
+        <CustomNavigationBar /> 
 
-              <Routes>
-                <Route path="/" element={[<Home />]} />
-                <Route path="/home" element={[<Home />]} />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          {/* <Route path="/about" element={<AboutMe />} /> */}
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Projects />} />
 
-                  {/* <Route path="/about" element={<AboutMe />} /> */}
-                  <Route path="/projects" element={<Projects />} />
-                  {/* <Route path="/contact" element={<Contact />} /> */}
-              </Routes>
-          </div>
-      </Router>
+          {/* <Route path="/contact" element={<Contact />} */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
