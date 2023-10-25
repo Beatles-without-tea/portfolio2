@@ -1,7 +1,9 @@
 // src/App.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+// import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './NavbarStyles.css';
 // import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -13,23 +15,22 @@ import './index.css';
 
 
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 {/* */}
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <CustomNavigationBar /> 
+      <Router basename={isDevelopment ? "/" : "/portfolio2"}>
+        <div className="App">
+            <CustomNavigationBar /> 
 
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          {/* <Route path="/about" element={<AboutMe />} /> */}
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/" element={<Projects />} />
-
-          {/* <Route path="/contact" element={<Contact />} */}
-        </Routes>
-      </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+            </Routes>
+        </div>
     </Router>
   );
 }
