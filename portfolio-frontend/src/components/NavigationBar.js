@@ -15,16 +15,16 @@ function CustomNavigationBar() {
              {/* <Nav.Link href="/home"></Nav.Link> */}
              <Nav.Link href="/home">Home</Nav.Link>
 
-              <Nav.Link href="/about">About me</Nav.Link>
+              {/* <Nav.Link href="/about">About me</Nav.Link> */}
               <Nav.Link href="/projects">Projects</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              {/* <Nav.Link href="/contact">Contact</Nav.Link> */}
             </Nav>
           </Container>
           <div className="mr-3">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="icon-margin">
+            <a href="https://www.linkedin.com/in/max-beales/" target="_blank" rel="noopener noreferrer" className="icon-margin">
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="icon-margin">
+            <a href="https://github.com/Beatles-without-tea" target="_blank" rel="noopener noreferrer" className="icon-margin">
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </div>

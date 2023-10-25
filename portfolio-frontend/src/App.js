@@ -24,10 +24,12 @@ function App() {
     <CustomNavigationBar /> 
 
               <Routes>
-                <Route path="/home" element={<Home />} />
-                  <Route path="/about" element={<AboutMe />} />
+                <Route path="/" element={[<Home />]} />
+                <Route path="/home" element={[<Home />]} />
+
+                  {/* <Route path="/about" element={<AboutMe />} /> */}
                   <Route path="/projects" element={<Projects />} />
-                  <Route path="/contact" element={<Contact />} />
+                  {/* <Route path="/contact" element={<Contact />} /> */}
               </Routes>
           </div>
       </Router>
@@ -38,11 +40,8 @@ function App() {
 // return (
 //   <div>
 //     <CustomNavigationBar /> 
-
 //       <Home />
-//       <AboutMe />
 //       <Projects />
-//       <Contact />
 //   </div>
 // );
 // }

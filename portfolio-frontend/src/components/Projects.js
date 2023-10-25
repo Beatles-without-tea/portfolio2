@@ -75,7 +75,7 @@ function Projects() {
 
         {title:"German whist" ,
         subtitle :'German Whist card game implemented in Python that utilises the Monte Carlo Tree Search (MCTS) algorithm to simulate an intelligent opponent' ,
-        imgSource:'images/original_monte_carlo.png',
+        imgSource:'images/monte_carlo_crop.png',
         tools:'Python | OOP | Git',
         imgSize:'100vh',
         projectLink:'https://github.com/Beatles-without-tea/german_whist'},
@@ -126,7 +126,7 @@ function Projects() {
     return (
         <div  className='projectPage' >
             <div>
-                <h1 style={{color:'#66FF00'}} className='projectText' >All Projects</h1>
+                <h1 style={{color:'#66FF00'}} className='projectText' >Some things I've worked on</h1>
             </div>
             <div>
                 <Project {...projects[currentProjectIndex]} 

@@ -31,7 +31,7 @@ function AboutMe() {
     return (
         <div className='aboutpage'>
  
-            <p>I am this that this that</p>
+            <p>About me </p>
 
 
             <ColoredLine color="#66FF00" />
@@ -61,17 +61,17 @@ function AboutMe() {
                 </div>
                 <div style={{display:'flex', alignItems:'center'}}>
                 <h5>Libraries: </h5>
-                <h6>Python, Javascript, HTML, CSS</h6>
+                <h6>Pandas, NumPy, Matplotlib, Keras, Scikit Learn, Streamlit, Dash</h6>
 
                 </div>
                 <div style={{display:'flex', alignItems:'center'}}>
                 <h5>Frameworks:</h5>
-                <h6>Python, Javascript, HTML, CSS</h6>
+                <h6>React</h6>
 
                 </div>
                 <div style={{display:'flex', alignItems:'center'}}>
                 <h5>Tools:</h5>
-                <h6>Python, Javascript, HTML, CSS</h6>
+                <h6>CLI, Git, Docker</h6>
                 </div>
             </div>
 
