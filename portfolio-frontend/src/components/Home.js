@@ -39,7 +39,7 @@ function Home() {
                 <br/> Currently looking for new opportunities !</p>
            
             </div>
-            <img src="/images/home_image.png" alt="Descriptive Alt Text" ref={imageRef} />
+            <img src="/images/home_image.png" alt="Cartoon Max" ref={imageRef} />
         </div>
     );
 }
